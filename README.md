@@ -12,4 +12,4 @@ A quick guide to my Project ->
 
 ## Usage
 
-A quick refreshment of Document Object Model with some tricky questions.
+A quick refreshment of Document Object Model(JS) with some tricky questions.
