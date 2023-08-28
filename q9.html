@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q3</title>
+</head>
+
+<body>
+
+    <h1>Press 1 to go to Section 1</h1>
+    <h1>Press 2 to go to Section 2</h1>
+    <h1>Press 3 to go to Section 3</h1>
+    <h1>Press t to go to the top of the page</h1>
+    <h1>Press b to go to the bottom of the page</h1>
+
+    <h2 id="s1">Section 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ducimus nulla quo, amet dicta nihil quibusdam
+        unde? Ut animi, sed officia sequi repudiandae cum ad quis tenetur. Saepe accusantium deleniti laboriosam
+        mollitia maiores officiis dolore magnam! Dolores officia laudantium quam beatae eveniet tempora id quod modi!
+        Placeat nostrum dolore adipisci molestiae quaerat animi mollitia at illum sit eligendi neque et doloremque quos
+        hic repellat qui, sunt ipsa numquam provident maiores facilis accusamus perferendis! Eos quis ut asperiores sed
+        eius laboriosam, quasi cupiditate ipsa quas nihil ducimus temporibus illo molestiae repellendus commodi omnis
+        quo beatae perspiciatis sit, a explicabo atque sapiente dolore? Totam mollitia cum deleniti! Quisquam, dolor?
+        Facere ipsum nisi, nam quisquam, ad voluptates suscipit ipsa minima tempore laborum sapiente, amet odit ab
+        doloribus similique at. Illum molestiae veniam ab maxime modi excepturi eveniet, dignissimos beatae voluptates
+        quod hic quasi temporibus dolore, nam porro distinctio, fugit ipsa voluptatum doloremque rerum expedita
+        quibusdam eaque quae. Eligendi excepturi voluptatibus voluptates, nam harum repudiandae facere deserunt tempora
+        veritatis quo maiores doloremque nobis expedita. Doloremque rerum ratione molestias distinctio a iusto!
+        Necessitatibus, consectetur nesciunt repellendus itaque eaque consequuntur deserunt placeat animi ducimus
+        mollitia veniam esse assumenda illum. Eveniet eius placeat excepturi numquam, minima obcaecati?</p>
+
+    <h2 id="s2">Section 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ducimus nulla quo, amet dicta nihil quibusdam
+        unde? Ut animi, sed officia sequi repudiandae cum ad quis tenetur. Saepe accusantium deleniti laboriosam
+        mollitia maiores officiis dolore magnam! Dolores officia laudantium quam beatae eveniet tempora id quod modi!
+        Placeat nostrum dolore adipisci molestiae quaerat animi mollitia at illum sit eligendi neque et doloremque quos
+        hic repellat qui, sunt ipsa numquam provident maiores facilis accusamus perferendis! Eos quis ut asperiores sed
+        eius laboriosam, quasi cupiditate ipsa quas nihil ducimus temporibus illo molestiae repellendus commodi omnis
+        quo beatae perspiciatis sit, a explicabo atque sapiente dolore? Totam mollitia cum deleniti! Quisquam, dolor?
+        Facere ipsum nisi, nam quisquam, ad voluptates suscipit ipsa minima tempore laborum sapiente, amet odit ab
+        doloribus similique at. Illum molestiae veniam ab maxime modi excepturi eveniet, dignissimos beatae voluptates
+        quod hic quasi temporibus dolore, nam porro distinctio, fugit ipsa voluptatum doloremque rerum expedita
+        quibusdam eaque quae. Eligendi excepturi voluptatibus voluptates, nam harum repudiandae facere deserunt tempora
+        veritatis quo maiores doloremque nobis expedita. Doloremque rerum ratione molestias distinctio a iusto!
+        Necessitatibus, consectetur nesciunt repellendus itaque eaque consequuntur deserunt placeat animi ducimus
+        mollitia veniam esse assumenda illum. Eveniet eius placeat excepturi numquam, minima obcaecati?</p>
+
+    <h2 id="s3">Section 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ducimus nulla quo, amet dicta nihil quibusdam
+        unde? Ut animi, sed officia sequi repudiandae cum ad quis tenetur. Saepe accusantium deleniti laboriosam
+        mollitia maiores officiis dolore magnam! Dolores officia laudantium quam beatae eveniet tempora id quod modi!
+        Placeat nostrum dolore adipisci molestiae quaerat animi mollitia at illum sit eligendi neque et doloremque quos
+        hic repellat qui, sunt ipsa numquam provident maiores facilis accusamus perferendis! Eos quis ut asperiores sed
+        eius laboriosam, quasi cupiditate ipsa quas nihil ducimus temporibus illo molestiae repellendus commodi omnis
+        quo beatae perspiciatis sit, a explicabo atque sapiente dolore? Totam mollitia cum deleniti! Quisquam, dolor?
+        Facere ipsum nisi, nam quisquam, ad voluptates suscipit ipsa minima tempore laborum sapiente, amet odit ab
+        doloribus similique at. Illum molestiae veniam ab maxime modi excepturi eveniet, dignissimos beatae voluptates
+        quod hic quasi temporibus dolore, nam porro distinctio, fugit ipsa voluptatum doloremque rerum expedita
+        quibusdam eaque quae. Eligendi excepturi voluptatibus voluptates, nam harum repudiandae facere deserunt tempora
+        veritatis quo maiores doloremque nobis expedita. Doloremque rerum ratione molestias distinctio a iusto!
+        Necessitatibus, consectetur nesciunt repellendus itaque eaque consequuntur deserunt placeat animi ducimus
+        mollitia veniam esse assumenda illum. Eveniet eius placeat excepturi numquam, minima obcaecati?</p>
+    <script>
+
+        let s1 = document.querySelector("#s1");
+        let s2 = document.querySelector("#s2");
+        let s3 = document.querySelector("#s3");
+
+        document.documentElement.addEventListener("keydown", (e) => {
+
+            let key = e.key;
+
+            if (key === "1")
+                s1.scrollIntoView();
+
+            else if (key === '2')
+                s2.scrollIntoView();
+
+            else if (key === '3')
+                s3.scrollIntoView();
+
+            else if (key === 't')
+                window.scrollTo(0, 0);
+
+            else if (key === 'b') {
+
+                let body = document.querySelector('body');
+                let dimensions = body.getBoundingClientRect();
+                window.scrollTo(0, dimensions.height);
+            }
+        })
+    </script>
+
+</body>
+
+</html>

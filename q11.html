@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q11</title>
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+        }
+
+        #pass {
+
+            display: block;
+            margin: auto;
+            margin-top: 10rem;
+            width: 25rem;
+            height: 3rem;
+        }
+
+        p {
+
+            text-align: center;
+            font-size: 3rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="pass">
+    <p>Caps On!</p>
+
+    <script>
+
+        let inputEle = document.querySelector('input');
+        let pEle = document.querySelector('p');
+        let shiftKey;
+
+        inputEle.addEventListener("keydown", (e) => {
+
+            if (e.getModifierState("CapsLock")) {
+
+                pEle.style.display = "block";
+                e.preventDefault();
+            }
+
+            else {
+
+                pEle.style.display = "none";
+            }
+
+            if (!shiftKey) e.preventDefault();
+        })
+
+        document.documentElement.addEventListener("keydown", (e) => {
+
+            let myKey = e.key;
+            if (myKey === "Shift")
+                shiftKey = true;
+        })
+
+
+        document.documentElement.addEventListener("keyup", (e) => {
+
+            let myKey = e.key;
+            if (myKey === "Shift")
+                shiftKey = false;
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q16</title>
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+        }
+
+        .balls {
+
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .ball {
+
+            height: 5rem;
+            width: 5rem;
+
+            border-radius: 50%;
+            background-color: lightcoral;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="balls">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+
+    <script>
+
+        // Make a loading animation using JS
+
+        let allBalls = document.querySelectorAll('.ball');
+
+        function animateBalls(idx) {
+
+            idx = idx % allBalls.length;
+
+            let currBall = allBalls[idx];
+            let prevBall;
+
+            if (idx === 0)
+                prevBall = allBalls[allBalls.length - 1];
+
+            else prevBall = allBalls[idx - 1];
+
+            currBall.style.opacity = 0;
+            prevBall.style.opacity = 1;
+
+            setTimeout(() => {
+                animateBalls(idx + 1);
+            }, 200)
+
+        }
+
+        animateBalls(0);
+
+    </script>
+
+</body>
+
+</html>

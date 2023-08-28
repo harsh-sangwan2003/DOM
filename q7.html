@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q7</title>
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+        }
+
+        body {
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .orange {
+
+            height: 20rem;
+            width: 20rem;
+            background-color: coral;
+            position: absolute;
+        }
+
+        .blue {
+
+            height: 10rem;
+            width: 10rem;
+            background-color: skyblue;
+
+            margin: auto;
+
+            position: relative;
+            top: 5rem;
+
+        }
+
+        .yellow {
+
+            height: 5rem;
+            width: 5rem;
+            background-color: yellow;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="orange">
+        <div class="blue">
+            <div class="yellow"></div>
+        </div>
+    </div>
+
+    <script>
+
+        let orange = document.querySelector('.orange');
+        let blue = document.querySelector('.blue');
+        let yellow = document.querySelector('.yellow');
+
+        orange.addEventListener("click", e => {
+            alert("Orange");
+            console.log(e.target, e.currentTarget);
+        })
+
+        blue.addEventListener("click", e => {
+            alert("Blue");
+            e.stopPropagation();
+            console.log(e.target, e.currentTarget);
+        })
+
+        yellow.addEventListener("click", e => {
+            alert("Yellow");
+            e.stopPropagation();
+            console.log(e.target, e.currentTarget);
+        })
+
+    </script>
+
+</body>
+
+</html>
